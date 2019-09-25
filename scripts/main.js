@@ -28,3 +28,5 @@ if(!localStorage.getItem('name')) {
 myButton.onclick = function() {
   setUserName();
 }
+var mediaElem = document.getElementById("my-media-element");
+mediaElem.load()
