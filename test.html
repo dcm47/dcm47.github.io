@@ -6,32 +6,51 @@
     <title>Number guessing game</title>
 
     <style>
-      html {
-        font-family: sans-serif;
-      }
-      body {
-        width: 50%;
-        max-width: 800px;
-        min-width: 480px;
-        margin: 0 auto;
-      }
-      .lastResult {
-        color: white;
-        padding: 3px;
-      }
     </style>
   </head>
 
   <body>
-    <button>Press me</button>
+    <h1>Image gallery example</h1>
+
+    <div class="full-img" background-color=rgba(0,0,0,0)>
+      <img class="displayed-img" src="images/pic1.jpg" width=100%>
+      <div class="overlay"></div>
+      <button class="dark">Darken</button>
+    </div>
+
+    <div class="thumb-bar">
+
+    </div>
   </body>
   <script>
-    const button = document.querySelector('button');
+    let overlay = document.querySelector('.overlay');
+    let full = document.querySelector('.displayed-img');
+    let thumb = document.querySelector('.thumb-bar');
+    let btn = document.querySelector('button');
+    for (let i = 1; i < 5; i++) {
+      let pic = document.createElement('img');
+      let path = 'images/pic' + i + '.jpg';
+      pic.setAttribute('src', path);
+      pic.setAttribute('width', '25%');
+      pic.setAttribute('class', 'thumb');
+      document.body.appendChild(pic);
+    };
 
-    button.onclick = function() {
-      let name = prompt('What is your name?');
-      alert('Hello ' + name + ', nice to see you!');
-    }
+    document.addEventListener('click', function(e) {
+        full.setAttribute('src', e.target.src);
+    });
+
+    btn.onclick = function() {
+      if (btn.getAttribute('class') === 'dark') {
+        overlay.setAttribute('style',"background-color: 'rgba(0,0,0,0.5)'");
+        btn.setAttribute('class', 'light');
+        btn.textContent = 'Lighten';
+      } else {
+        overlay.setAttribute('style',"background-color: 'rgba(0,0,0,0)'");
+        btn.setAttribute('class', 'dark');
+        btn.textContent = 'Darken';
+      };
+    };
   </script>
   
 </html>
