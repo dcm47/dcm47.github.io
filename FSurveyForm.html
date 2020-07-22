@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>My Survey Form Page</title>
+    <style>
+        @media (min-width: 800px) {
+            body {
+                width: 60%;
+            }
+        }
+
+        #title,
+        #description {
+            font-weight: bold;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        form {
+            background-color: #555;
+            color: #eee;
+            padding: 10px;
+        }
+
+        body {
+            font-size: 18px;
+            background-color: #eee;
+            color: #555;
+            margin: auto;
+        }
+
+        #submit {
+            color: #000;
+            background-color: #eee;
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+            margin: auto;
+            display: block;
+        }
+
+        label {
+            display: block;
+            text-indent: 5px;
+        }
+
+        input {
+            margin-bottom: 10px;
+        }
+
+        #name,
+        #email,
+        #number,
+        textarea {
+            display: block;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">Please fill out the following form</h1>
+    <form id="survey-form">
+        <label for='name' id="name-label">Name
+            <input id="name" type="text" required placeholder='Enter your name'>
+        </label>
+        <label for="email" id="email-label">Email
+            <input id="email" type="email" required placeholder="Enter your email">
+        </label>
+        <label for="number" id="number-label">Number
+            <input id="number" type="number" min="0" max="10" required placeholder="Enter your number">
+        </label>
+        <label for="dropdown">Why are you come to our website?
+            <br />
+            <select id="dropdown">
+                <option value="funny">It's Funny</option>
+                <option value="accident">I came by accident</option>
+                <option value="other">Other reason</option>
+            </select>
+        </label>
+        <br />
+        <fieldset>
+            <legend>Please rate your pleasure when using our website</legend>
+            <label for="radio1">
+                <input type="radio" name="radio" id="radio1" value="good"> I like it!
+            </label>
+            <label for="radio2">
+                <input type="radio" name="radio" id="radio2" value="okay"> It's okay
+            </label>
+            <label for="radio3">
+                <input type="radio" name="radio" id="radio3" value="bad"> I don't like it
+            </label>
+        </fieldset>
+        <br />
+        <fieldset>
+            <legend>What we should improve in the future?</legend>
+            <label for="checkbox1">
+                <input type="checkbox" name="checkbox" id="checkbox1" value="checkbox1"> Optimize browsing speed
+            </label>
+            <label for="checkbox2">
+                <input type="checkbox" name="checkbox" id="checkbox2" value="checkbox2"> Update more content
+            </label>
+            <label for="checkbox3">
+                <input type="checkbox" name="checkbox" id="checkbox3" value="checkbox3"> Other (Told us your additional
+                comment in the following field)
+            </label>
+        </fieldset>
+        <br />
+        <label>Additional comment
+            <textarea>Enter your comment here</textarea>
+        </label>
+        <br />
+        <input type="submit" value="Submit" id="submit">
+    </form>
+    <p id="description">Thank you for your help, we really appreciate it!</p>
+    <script src='scripts/bundle.js'></script>
+</body>
+
+</html>
