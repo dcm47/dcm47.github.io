@@ -66,11 +66,11 @@ toDos.addEventListener("click", remove_todo);
 addToDos.addEventListener("click", create_todo);
 
 window.onload = function () {
-    if (typeof (localStorage.getItem("todos")) == 'undefined') {
+    if (localStorage.getItem("todos") === null) {
         pass;
     } else {
-        console.log(localStorage.getItem('todos'));
-        //todoList = JSON.parse(localStorage.getItem('todos'));
-        //update_todo();
+        console.log('It\'s not equal to null')
+        todoList = JSON.parse(localStorage.getItem('todos'));
+        update_todo();
     }
 }
