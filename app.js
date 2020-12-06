@@ -69,6 +69,7 @@ window.onload = function () {
     if (typeof (localStorage.getItem("todos")) == 'undefined') {
         pass;
     } else {
+        console.log(localStorage.getItem('todos'));
         todoList = JSON.parse(localStorage.getItem('todos'));
         update_todo();
     }
