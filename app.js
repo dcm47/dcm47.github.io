@@ -70,7 +70,7 @@ window.onload = function () {
         pass;
     } else {
         console.log(localStorage.getItem('todos'));
-        todoList = JSON.parse(localStorage.getItem('todos'));
-        update_todo();
+        //todoList = JSON.parse(localStorage.getItem('todos'));
+        //update_todo();
     }
 }
