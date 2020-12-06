@@ -67,7 +67,7 @@ addToDos.addEventListener("click", create_todo);
 
 window.onload = function () {
     if (localStorage.getItem("todos") === null) {
-        pass;
+        console.log('The localStorage is empty');
     } else {
         console.log('It\'s not equal to null')
         todoList = JSON.parse(localStorage.getItem('todos'));
