@@ -1,0 +1,62 @@
+html {
+    padding: 50px;
+    background-image: url("/images/wallhaven-4lqz6r.jpg");
+}
+
+body {
+    margin: auto;
+    padding: 30px;
+    width: 80%;
+    border: 3px solid rgba(0,255,255,0.3);
+    text-align: center;
+    word-wrap: break-word;
+}
+
+#todos-name-container {
+    padding: 8px;
+    color: violet;
+    background-color: rgba(0,0,0,0.2);
+    font-size: 18px;
+    font-family: "Hack", "Source Code Pro";
+    border: 3px dotted rgba(255,255,255,0.3);
+}
+
+#add-todo-container {
+    padding: 8px;
+    color: violet;
+    background-color: rgba(0,255,255,0.1);
+    border: 3px dotted rgba(255,255,255,0.2);
+}
+
+#add-todo-container input {
+    padding: 4px;
+}
+
+.todo-item-container {
+    padding: 8px;
+    color: white;
+    background-color: rgba(0,0,0,0.2);
+    border: 3px dotted rgba(255,255,255,0.3);
+    font-size: 18px;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+}
+
+.todo-item-check {
+    border: 3px dotted black;
+    width: 5%;
+}
+
+.todo-item {
+    width: 80%;
+}
+
+.todo-item-remove {
+    width: 5%;
+    height: 20px;
+}
+
+.fa-trash {
+    color: darkorange;
+}
